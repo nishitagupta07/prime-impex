@@ -26,18 +26,30 @@ export function SiteHeader() {
       <div className="mx-auto grid h-20 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 lg:px-8">
 
         {/* Logo */}
-        <Link
-          to="/"
-          className="flex min-w-0 items-center"
-          onClick={() => setOpen(false)}
-          aria-label="Prime Impex Stones home"
-        >
-          <img
-            src={logo}
-            alt="Prime Impex Stones"
-            className="h-14 w-14 rounded-full object-cover border-2 border-hero-foreground/20"
-          />
-        </Link>
+    {/* Logo + Company Name */}
+<Link
+  to="/"
+  className="flex min-w-0 items-center gap-3"
+  onClick={() => setOpen(false)}
+  aria-label="Prime Impex Stones home"
+>
+  {/* Logo Image */}
+  <img
+    src={logo}
+    alt="Prime Impex Stones Logo"
+    className="h-14 w-14 shrink-0 rounded-full object-cover border-2 border-hero-foreground/20"
+  />
+
+  {/* Company Name */}
+  <div className="hidden sm:flex flex-col leading-tight">
+    <span className="font-display text-lg font-semibold tracking-wide text-hero-foreground">
+      PRIME IMPEX STONES
+    </span>
+    <span className="text-[9px] uppercase tracking-[0.22em] text-hero-foreground/60">
+      Natural Stone
+    </span>
+  </div>
+</Link>
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 lg:flex">
